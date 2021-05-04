@@ -5,20 +5,60 @@
     </nav-bar>
     <home-swiper :banners="banners" />
     <home-recommend :recommend="recommend" />
+    <Feature />
+    <nav-control class="nav-control" :titles="['流行', '新款', '精选']" />
+    <ul>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+      <li>11</li>
+    </ul>
   </div>
 </template> 
 
 <script>
-import NavBar from "../../components/common/navbar/NavBar";
 import HomeSwiper from "./componentschild/HomeSwiper";
 import HomeRecommend from "./componentschild/HomeRecommend";
+import Feature from "./componentschild/Feature";
+
+import NavBar from "../../components/common/navbar/NavBar";
+import NavControl from "../../components/common/navcontrol/NavControl";
 
 import { getHomeMultidata } from "../../network/home";
 export default {
   components: {
-    NavBar,
     HomeSwiper,
     HomeRecommend,
+    Feature,
+
+    NavBar,
+    NavControl,
   },
   data() {
     return {
@@ -39,8 +79,20 @@ export default {
 </script>
 
 <style scoped>
+#home {
+  padding-top: 44px;
+}
 .home-nav {
   background-color: pink;
   color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+.nav-control {
+  position: sticky;
+  top: 44px;
 }
 </style>
