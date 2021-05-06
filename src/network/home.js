@@ -1,11 +1,11 @@
 import { request } from '../network/request'
 
-export function getHomeData() {
+export function getHomeData(type, page) {
     return request({
         url: 'home/data',
         params: {
-            type: "pop",
-            page: 5
+            type,
+            page
         }
     })
 }

@@ -30,6 +30,7 @@ export default {
   methods: {
     clickControlItem(index) {
       this.curIndex = index;
+      this.$emit("itemIndex", index);
     },
   },
 };
